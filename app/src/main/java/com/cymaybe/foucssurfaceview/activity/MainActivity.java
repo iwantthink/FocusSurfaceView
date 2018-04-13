@@ -21,6 +21,8 @@ import com.cymaybe.foucssurfaceview.R;
 import com.cymaybe.foucssurfaceview.fragment.PictureFragment;
 import com.cymaybe.foucsurfaceview.FocusSurfaceView;
 
+import java.io.IOException;
+
 import static android.Manifest.permission.CAMERA;
 import static com.cymaybe.foucssurfaceview.fragment.PictureFragment.CROP_PICTURE;
 import static com.cymaybe.foucssurfaceview.fragment.PictureFragment.ORIGIN_PICTURE;
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Camera mCamera;
     private SurfaceHolder mHolder;
     private boolean focus = false;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -272,6 +275,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
     }
+
 
     /**
      * 用来监测左横屏和右横屏切换时旋转摄像头的角度
